@@ -20,12 +20,14 @@ body{
     padding-bottom: 20px;
     padding-left: 20px;
 }
-.main__top__block{
+.main__top__block, .main__bottom__block{
     border: 1px solid yellowgreen;
     width: 550px;
     height: 300px;
 }
-.main__top__block__give{
+.main__top__block__give, .main__bottom__take{
+    display: flex;
+    flex-direction: row;
     width: 550px;
     height: 60px;
     border-radius: 5px;
@@ -36,7 +38,14 @@ body{
     width: 250px;
     height: 60px;
 }
-.main__top__block__email{
+.price{
+    width: 300px;
+    height: 60px;
+}
+.main__top__block__input, .main__bottom__block__input{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     width: 550px;
     height: 60px;
     border-radius: 5px;
@@ -59,4 +68,20 @@ p{
     height: 400px;
     padding-bottom: 20px;
     padding-right: 20px;
+}
+#email{
+    width: 500px;
+    height: 100%;
+    background: none;
+    font-size: 20px;
+    border: none;
+}
+#email:focus{
+    border-color: none;
+    background: none;
+}
+#emailJpg{
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
 }

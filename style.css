@@ -5,27 +5,27 @@ body{
     display: flex;
 }
 .main{
-    width: 1200px;
+    display: inline-flex;
+    width: 1290px;
     height: 500px;
-    background: yellow;
+    background: linear-gradient(105deg, #F3DA1F 50%, #FCE21D 50%);
     border-bottom: 1px solid #E2CD29;
-    border-radius: 30px;
+    border-radius: 10px;
     padding-left: 50px;
 }
 .main__top{
-    background: green;
+    border: 1px solid red;
     width: 600px;
     height: 400px;
     padding-bottom: 20px;
     padding-left: 20px;
 }
 .main__top__block{
-    background: yellowgreen;
+    border: 1px solid yellowgreen;
     width: 550px;
-    height: 200px;
+    height: 300px;
 }
 .main__top__block__give{
-    background: red;
     width: 550px;
     height: 60px;
     border-radius: 5px;
@@ -37,8 +37,26 @@ body{
     height: 60px;
 }
 .main__top__block__email{
-
+    width: 550px;
+    height: 60px;
+    border-radius: 5px;
+    border: 3px solid red;
+    margin-top: 20px;
 }
 p{
     font-size: 30px;
+}
+.main__top__warning{
+    width: 550px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid red;
+    margin-top: 20px;
+}
+.main__bottom{
+    border: 1px solid red;
+    width: 600px;
+    height: 400px;
+    padding-bottom: 20px;
+    padding-right: 20px;
 }

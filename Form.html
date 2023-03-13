@@ -12,11 +12,19 @@
         <div class="give">
             <div class="give__valute">
                 <button class="give__valute-button">Bitcoin</button>
+                
                 <ul class="give__valute-list">
-                    <li class="give__valute-list-item"></li>
+                    <li class="give__valute-list-item" data-value="bitcoin">Bitcoin</li>
+                    <li class="give__valute-list-item" data-value="tether">Tether</li>
+                    <li class="give__valute-list-item" data-value="ethereum">Ethereum</li>
+                    <li class="give__valute-list-item" data-value="litecoin">Litecoin</li>
                 </ul>
+
+                <input type="text" name="select-category" value="" class="give__valute__input-hidden">
+
                 <input type="number" class="inp" value="0.00296654">
                 <button class="typeOfValute">BTC</button>
+
             </div>
             <div class="give__email"></div>
             <div class="give__warning"></div>
@@ -24,5 +32,8 @@
         <div class="middle"></div>
         <div class="take"></div>
     </div>
+
+    <script src="dropdown.js"></script>
+
 </body>
 </html>

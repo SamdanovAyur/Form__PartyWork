@@ -17,6 +17,8 @@
     border: 1px solid black;
 }
 
+/* (ОТДАТЬ) Блок фильтра валюты */
+
 .give__valute, .give__email, .give__warning{
     width: 100%;
     background: white;
@@ -41,18 +43,13 @@
     background: white;
 }
 .give__valute-button:hover, .typeOfValute-button:hover{
-    background: #be3455;
+    background: #7e2439;
     color: white;
     border-radius: 6px;
 }
 
-.give__valute-list{
-    left: 0;
-}
 
-.typeOfValute-list{
-    right: 0;
-}
+
 
 .give__valute-list, .typeOfValute-list{
     display: none;
@@ -69,15 +66,26 @@
     overflow: hidden;
 
     border-radius: 6px;
-    width: 100%;
 
     z-index: 1;
 }
 
-.give__valute-list--visible{
-    display: block;
+.give__valute-list{
+    left: 0;
 }
-.typeOfValute-list--visible{
+
+.typeOfValute-list{
+    right: 0;
+}
+
+.give__valute-list{
+    width: 100%; 
+}
+
+
+
+
+.give__valute-list--visible, .typeOfValute-list--visible{
     display: block;
 }
 
@@ -98,13 +106,14 @@
     border-bottom: 1px solid #7E9BBd;
 }
 .give__valute-list-item:hover, .typeOfValute-list-item:hover{
-    background: #a2a2a2;
+    background: #7e2439;
+    color: white;
 }
 
 
 
 
-.inp{
+.give__valute-inp{
     width: 45%;
     border-right: 0px;
     border-left: 1px solid black;
@@ -123,6 +132,9 @@
 
 .give__email{
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .give__warning{
@@ -135,17 +147,36 @@
 
 
 
+
+/* Блок ввода электронной почты */
+
 .give__email-input{
-    height: 100%;
+    height: 80%;
     width: 80%;
 }
 
+.give__email-input{
+    border: 1px solid black;
+    /* border: none; */
+    outline: none;
+    font-size: 20px;
+}
 
+
+
+
+/* Блок реверса */
 
 .middle{
     border: 1px solid black;
     width: 100px;
 }
+
+
+
+
+
+/* (ПОЛУЧИТЬ) Блок фильтра валюты  */
 
 .take{
     border: 1px solid black;

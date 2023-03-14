@@ -5,13 +5,14 @@ let giveValInp = document.querySelector('.give__valute__input-hidden');
 let typeOfValuteBtn = document.querySelector('.typeOfValute-button');
 let typeOfValuteList = document.querySelector('.typeOfValute-list');
 let typeOfValuteListItem = document.querySelectorAll('.typeOfValute-list-item');
+let typeOfValuteInp = document.querySelector('.typeOfValute__input-hidden')
 
 giveValBtn.addEventListener('click', function(){
     giveValList.classList.toggle('give__valute-list--visible');
 });
 
 typeOfValuteBtn.addEventListener('click', function(){
-    typeOfValuteList.classList.toggle('typeOfValute-list--visible')
+    typeOfValuteList.classList.toggle('typeOfValute-list--visible');
 });
 
 giveValListItems.forEach(function(listItem){
@@ -24,8 +25,24 @@ giveValListItems.forEach(function(listItem){
     });
 });
 
+typeOfValuteListItem.forEach(function(listItem){
+    listItem.addEventListener('click', function(e){
+        e.stopPropagation();
+        typeOfValuteBtn.innerText = this.innerText;
+        typeOfValuteBtn.focus();
+        typeOfValuteInp.value = this.dataset.value;
+        typeOfValuteList.classList.remove('typeOfValute-list--visible');
+    });
+});
+
 document.addEventListener('click', function(e){
     if(e.target !== giveValBtn){
         giveValList.classList.remove('give__valute-list--visible');
+    }
+});
+
+document.addEventListener('click', function(e){
+    if(e.target !== typeOfValuteBtn){
+        typeOfValuteList.classList.remove('typeOfValute-list--visible');
     }
 });

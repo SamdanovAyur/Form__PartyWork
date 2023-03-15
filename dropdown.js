@@ -6,7 +6,10 @@ let giveValInpHidden = document.querySelector('.give__valute__input-hidden');
 let giveValInp = document.querySelector('.give__valute-inp');
 
 let typeOfValuteBtn = document.querySelector('.typeOfValute-button');
-let typeOfValuteList = document.querySelector('.typeOfValute-list');
+let typeOfValuteListBtc = document.querySelector('.typeOfValute-list-bitcoin');
+let typeOfValuteListTtr = document.querySelector('.typeOfValute-list-tether');
+let typeOfValuteListEtrm = document.querySelector('.typeOfValute-list-ethereum');
+let typeOfValuteListLtc = document.querySelector('.typeOfValute-list-litecoin');
 let typeOfValuteListItem = document.querySelectorAll('.typeOfValute-list-item');
 let typeOfValuteInpHidden = document.querySelector('.typeOfValute__input-hidden');
 
@@ -16,12 +19,27 @@ giveValBtn.addEventListener('click', function(){
     giveValList.classList.toggle('give__valute-list--visible');
 });
 
-typeOfValuteBtn.addEventListener('click', function(){
-    typeOfValuteList.classList.toggle('typeOfValute-list--visible');
+typeOfValuteBtn.addEventListener('click', function (){
+    changeTypeOfValute().classList.toggle('typeOfValute-list--visible');
 });
 
+function changeTypeOfValute(){
+    if(giveValInpHidden.value == "bitcoin"){
+        return typeOfValuteListBtc;
+    }
+    if(giveValInpHidden.value == "tether"){
+        return typeOfValuteListTtr;
+    }
+    if(giveValInpHidden.value == "ethereum"){
+        return typeOfValuteListEtrm;
+    }
+    if(giveValInpHidden.value == "litecoin"){
+        return typeOfValuteListLtc;
+    }
+}
+
 giveValListItems.forEach(function(listItem){
-    listItem.addEventListener('click', function(e){
+    listItem.addEventListener('click', function(){
         giveValBtn.innerText = this.innerText;
         giveValBtn.focus();
         giveValInpHidden.value = this.dataset.value;
@@ -33,11 +51,11 @@ giveValListItems.forEach(function(listItem){
 
 
 typeOfValuteListItem.forEach(function(listItem){
-    listItem.addEventListener('click', function(e){
+    listItem.addEventListener('click', function(){
         typeOfValuteBtn.innerText = this.innerText;
         typeOfValuteBtn.focus();
         typeOfValuteInpHidden.value = this.dataset.value;
-        typeOfValuteList.classList.remove('typeOfValute-list--visible');
+        changeTypeOfValute().classList.remove('typeOfValute-list--visible');
         changeWarning();
     });
 });
@@ -50,7 +68,7 @@ document.addEventListener('click', function(e){
 
 document.addEventListener('click', function(e){
     if(e.target !== typeOfValuteBtn){
-        typeOfValuteList.classList.remove('typeOfValute-list--visible');
+        changeTypeOfValute().classList.remove('typeOfValute-list--visible');
     }
 });
 

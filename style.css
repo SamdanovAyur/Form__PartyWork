@@ -89,9 +89,7 @@
     display: block;
 }
 
-.give__valute-list-item, .typeOfValute-list-bitcoin-item, 
-.typeOfValute-list-tether-item, .typeOfValute-list-ethereum-item, 
-.typeOfValute-list-litecoin-item{
+.give__valute-list-item, .typeOfValute-list-item{
     margin: 0;
     padding: 0;
     border: 1px solid #7E9bbd;
@@ -107,9 +105,7 @@
     border-radius: 0 0 6px 6px;
     border-bottom: 1px solid #7E9BBd;
 }
-.give__valute-list-item:hover, .typeOfValute-list-bitcoin-item:hover,
-.typeOfValute-list-tether-item:hover, .typeOfValute-list-ethereum-item:hover, 
-.typeOfValute-list-litecoin-item:hover{
+.give__valute-list-item:hover, .typeOfValute-list-item:hover{
     background: #7e2439;
     color: white;
 }

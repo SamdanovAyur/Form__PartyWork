@@ -9,50 +9,95 @@
 </head>
 <body>
     <div class="main">
-        <div class="give">
-            <div class="give__valute">
-                <button class="give__valute-button">Bitcoin</button>
-                
-                <ul class="give__valute-list">
-                    <li class="give__valute-list-item" data-value="bitcoin">Bitcoin</li>
-                    <li class="give__valute-list-item" data-value="tether">Tether</li>
-                    <li class="give__valute-list-item" data-value="ethereum">Ethereum</li>
-                    <li class="give__valute-list-item" data-value="litecoin">Litecoin</li>
-                </ul>
-                <input type="text" name="select-category" value="bitcoin" class="give__valute__input-hidden">
+        <div class="main__give">
+            <p class="txt">Отдаете</p>
+            <div class="give">
+                <div class="give__valute">
+                    <button class="give__valute-button">Bitcoin</button>
+                    
+                    <ul class="give__valute-list">
+                        <li class="give__valute-list-item" data-value="bitcoin">Bitcoin</li>
+                        <li class="give__valute-list-item" data-value="tether">Tether</li>
+                        <li class="give__valute-list-item" data-value="ethereum">Ethereum</li>
+                        <li class="give__valute-list-item" data-value="litecoin">Litecoin</li>
+                    </ul>
+                    <input type="text" name="select-category" value="bitcoin" class="give__valute__input-hidden">
+    
+                    <input type="text" class="give__valute-inp" value="0.00296654">
+                    
+                    <button class="typeOfValute-button">BTC</button>
+                    <ul class="typeOfValute-list-bitcoin">
+                        <li class="typeOfValute-list-item" data-value="btc">BTC</li>
+                        <li class="typeOfValute-list-item" data-value="bep20">BEP20</li>
+                    </ul>
+                    <ul class="typeOfValute-list-tether">
+                        <li class="typeOfValute-list-item" data-value="trc20">TRC20</li>
+                        <li class="typeOfValute-list-item" data-value="bep20Thr">BEP20</li>
+                        <li class="typeOfValute-list-item" data-value="erc20Thr">ERC20</li>
+                        <li class="typeOfValute-list-item" data-value="solThr">SOL</li>
+                    </ul>
+                    <ul class="typeOfValute-list-ethereum">
+                        <li class="typeOfValute-list-item" data-value="erc20Eth">ERC20</li>
+                        <li class="typeOfValute-list-item" data-value="bep20Eth">BEP20</li>
+                    </ul>
+                    <ul class="typeOfValute-list-litecoin">
+                        <li class="typeOfValute-list-item" data-value="ltc">LTC</li>
+                    </ul>
+                    <input type="text" name="select-category" value="btc" class="typeOfValute__input-hidden">
+    
+                </div>
+                <div class="give__email">
+                    <input type="text" name="email" placeholder="E-mail" class="give__email-input">
+                </div>
+                <div class="give__warning">
+                    <p class="give__warning-text">Требуется два подтверждения от сети Bitcoin.</p>
+                </div>
+            </div>
 
-                <input type="number" class="give__valute-inp" value="0.00296654">
-                
-                <button class="typeOfValute-button">BTC</button>
-                <ul class="typeOfValute-list-bitcoin">
-                    <li class="typeOfValute-list-item" data-value="btc">BTC</li>
-                    <li class="typeOfValute-list-item" data-value="bep20">BEP20</li>
-                </ul>
-                <ul class="typeOfValute-list-tether">
-                    <li class="typeOfValute-list-item" data-value="trc20">TRC20</li>
-                    <li class="typeOfValute-list-item" data-value="bep20Thr">BEP20</li>
-                    <li class="typeOfValute-list-item" data-value="erc20Thr">ERC20</li>
-                    <li class="typeOfValute-list-item" data-value="solThr">SOL</li>
-                </ul>
-                <ul class="typeOfValute-list-ethereum">
-                    <li class="typeOfValute-list-item" data-value="erc20Eth">ERC20</li>
-                    <li class="typeOfValute-list-item" data-value="bep20Eth">BEP20</li>
-                </ul>
-                <ul class="typeOfValute-list-litecoin">
-                    <li class="typeOfValute-list-item" data-value="ltc">LTC</li>
-                </ul>
-                <input type="text" name="select-category" value="btc" class="typeOfValute__input-hidden">
-
-            </div>
-            <div class="give__email">
-                <input type="text" name="email" class="give__email-input">
-            </div>
-            <div class="give__warning">
-                <p class="give__warning-text">Требуется два подтверждения от сети Bitcoin.</p>
-            </div>
         </div>
         <div class="middle"></div>
-        <div class="take"></div>
+        <div class="main__take">
+            <p class="txt">Получаете</p>
+            <div class="take">
+                <div class="take__valute">
+                    <button class="take__valute-button">Тинькофф</button>
+                    
+                    <ul class="take__valute-list">
+                        <li class="take__valute-list-item" data-value="tinkoff">Тинькофф</li>
+                        <li class="take__valute-list-item" data-value="sber">Сбербанк</li>
+                        <li class="take__valute-list-item" data-value="qiwi">QIWI</li>
+                    </ul>
+
+                    <input type="text" name="select-category" value="tinkoff" class="take__valute__input-hidden">
+    
+                    <input type="text" class="take__valute-inp" value="5601.8852708">
+
+                    <p class="rub">RUB</p>
+                    
+                </div>
+
+                <div class="take__fullName">
+                    <input type="text" name="number" placeholder="ФИО получателя" class="take__fullName-input">
+                </div>
+
+                <div class="take__number">
+                    <input type="text" name="number" placeholder="Номер телефона" class="take__number-input">
+                </div>
+                
+                <div class="take__qiwi">
+                    <input type="text" name="number" placeholder="QIWI кошелек" class="take__qiwi-input">
+                </div>
+
+                <div class="take__warning">
+                    <p class="take__warning-text">Перевод только на банковские карты РФ.</p>
+                </div>
+
+
+                <input type="checkbox" name="agree" class="agreeCheck">
+                <button type="submit" class="submit" disabled>Создать заявку</button>
+                
+            </div>
+        </div>
     </div>
 
     <script src="dropdown.js"></script>
